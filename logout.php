@@ -1,0 +1,19 @@
+<?php 
+session_start();
+include('config.php');
+if(isset($_SESSION['user']))
+{
+    unset($_SESSION['user']);
+    header("location:login.php");
+}
+if(isset($_SESSION['vendor']))
+{
+    unset($_SESSION['vendor']);
+    header("location:login.php");
+}
+if(isset($_SESSION['admin']))
+{
+    unset($_SESSION['admin']);
+    header("location:admin/login.php");
+}
+?>
